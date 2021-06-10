@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "69db8147-fc7e-44b1-a74c-8b710f7f3b8f",
+		"name": "CandidateAssessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7777/candidate/getScore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/candidate/getScore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"candidate",
+						"getScore"
+					]
+				},
+				"description": "For Getting Avg Score Per Round and Maximum Total Score"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7777/candidate/addScore",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"candidate\":\"60c1c8e018528c0f446437b8\",\r\n    \"score\":{\r\n        \"firstRound\":6,\r\n        \"secondRound\":6,\r\n        \"thirdRound\":6\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/candidate/addScore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"candidate",
+						"addScore"
+					]
+				},
+				"description": "Candidate Score on the  basis of round"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7777/candidate/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Yatesh\",\r\n    \"email\":\"yatesh@gmail.com\",\r\n    \"address\":\"Dr. Mukherjee Nagar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/candidate/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"candidate",
+						"create"
+					]
+				},
+				"description": "Adding Candidate Details"
+			},
+			"response": []
+		}
+	]
+}
